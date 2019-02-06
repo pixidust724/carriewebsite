@@ -54,6 +54,10 @@ header nav li {
     list-style: none;
 }
 
+h3 {
+    margin: 0;
+}
+
 a { @include small-text;
     text-decoration: none;
     color: $primary-color;
@@ -63,7 +67,9 @@ p {
     @include small-text;
 }
 
-img .icon {
+img.icon {
+    width: 56px;
+    height: 56px;
     display: inline-block;
     align-items: baseline;
 }
