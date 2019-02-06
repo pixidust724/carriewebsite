@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+@each $body, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+    #{$body} {
+        font-family: 'Space Mono', monospace;
+        font-size: $size;
+    }
+  }
+
+  $size: 16px;
+  $primary-color: #000;
+  $background-color: rgb(255, 230, 232);
+
+@mixin large-text {
+    font: {
+      weight: bold;
+    }
+  }
+
+
+@mixin small-text {
+    font: {
+        font-size: $size;
+        family: 'Space Mono', monospace;
+    }
+  }
+
+
+
+
+body {
+    max-width: 780px;
+    margin: 40px auto;
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+
+header {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+header img {
+    width: 80px;
+    height:40px;
+}
+
+header nav li {
+    padding-right: 16px;
+    display: inline;
+    list-style: none;
+}
+
+a { @include small-text;
+    text-decoration: none;
+    color: $primary-color;
+}
+
+p {
+    @include small-text;
+}
+
+img .icon {
+    display: inline-block;
+    align-items: baseline;
+}
+
+img.background-img {
+    z-index: -1;
+    max-height: 320px;
+    position: absolute;
+    right: 200px;
+    bottom:0px;
+}
