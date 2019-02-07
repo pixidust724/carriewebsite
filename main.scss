@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
-@import url('https://fonts.googleapis.com/css?family=Biryani:900');
 
 @each $body, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
     #{$body} {
-        font-family: 'Biryani', sans-serif;
+        font-family: 'Oxygen Mono', monospace;
         font-size: $size;
     }
   }
 
   $size: 16px;
   $primary-color: #000;
-  $background-color: #e8ebf5;
+  $background-color: #D1E8FF;
 
 @mixin large-text {
     font: {
@@ -27,60 +26,58 @@
   }
 
 
-
-
 body {
-    max-width: 780px;
-    margin: 40px auto;
     background-color: $background-color;
     color: $primary-color;
 }
 
-div.loading {
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: $background-color;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+div.container {
+    margin: 40px auto;
+    max-width: 780px;
 }
 
-div.loading h3 {
-    padding-left:24px;
+@keyframes animatedBackground {
+	from { background-position: 15% 85%; }
+	to { background-position: 100% 85%; }
 }
 
-div.loading.hidden {
-    opacity: 0;
-    pointer-events: none;
+body {
+    width: 100%; 
+    height: 768px;
+    background-image: url(icon/cloud1.png);
+
+    background-repeat: repeat-x;
+
+    animation: animatedBackground 70s linear infinite;
+    -ms-animation: animatedBackground 70s linear infinite;
+    -moz-animation: animatedBackground 70s linear infinite;
+    -webkit-animation: animatedBackground 70s linear infinite;
 }
 
 header {    
     z-index: 1;
-    padding-top: 40px;
+    padding-top: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-header img {
-    width: 80px;
-    height:40px;
+header img.logo-img {
+    display: inline-block;
+    text-align: left;
+    width: 40px;
+
 }
 
 header nav li {
+    display: inline;
     text-align: left;
     padding-right: 16px;
     list-style: none;
 }
 
 header nav li a {
-    position: relative;
     padding: 12px;
 }
 
@@ -139,6 +136,6 @@ img.portfolio-img:hover {
 }
 
 footer {
-    padding-top: 120px;
+    padding-top: 60px;
     text-align: center;
 }
