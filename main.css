@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oxygen+Mono");
+@import url("https://fonts.googleapis.com/css?family=Biryani:900");
 h1 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Biryani', sans-serif;
   font-size: 2em; }
 
 h2 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Biryani', sans-serif;
   font-size: 1.5em; }
 
 h3 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Biryani', sans-serif;
   font-size: 1.2em; }
 
 body {
@@ -17,8 +18,27 @@ body {
   background-color: #e8ebf5;
   color: #000; }
 
-header {
+div.loading {
   z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e8ebf5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+div.loading h3 {
+  padding-left: 24px; }
+
+div.loading.hidden {
+  opacity: 0;
+  pointer-events: none; }
+
+header {
+  z-index: 1;
   padding-top: 40px;
   display: flex;
   flex-direction: row;
@@ -30,16 +50,20 @@ header img {
   height: 40px; }
 
 header nav li {
+  text-align: left;
   padding-right: 16px;
-  display: inline;
   list-style: none; }
+
+header nav li a {
+  position: relative;
+  padding: 12px; }
 
 h3 {
   margin: 0; }
 
 a {
   font-font-size: 16px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Oxygen Mono', monospace;
   text-decoration: none;
   color: #000;
   z-index: 1;
@@ -47,15 +71,20 @@ a {
 
 p {
   font-font-size: 16px;
-  font-family: 'Space Mono', monospace; }
+  font-family: 'Oxygen Mono', monospace; }
 
 img.icon {
   width: 56px;
   height: 56px;
   display: inline-block;
-  align-items: baseline; }
+  align-items: center;
+  vertical-align: middle; }
+
+img.footer-icon {
+  display: inline; }
 
 section.collage {
+  cursor: url("icon/cursor.svg"), auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -76,5 +105,9 @@ img.portfolio-img {
 
 img.portfolio-img:hover {
   z-index: 1; }
+
+footer {
+  padding-top: 120px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
