@@ -58,6 +58,12 @@ body {
 #keyart-4 {
   background-image: url(img/bg/bg5.png); }
 
+@media (max-width: 640px) {
+  .keyart_layer {
+    background-size: auto 400px; }
+
+  .keyart, .keyart_layer {
+    height: 400px; } }
 header {
   z-index: 1;
   padding-top: 16px;
