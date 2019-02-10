@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 48px;
 
     @include tablet {
         font-size: 32px;
@@ -84,6 +84,7 @@ img.footer-icon {
 
 
 div.container {
+    max-width: 950px;
     padding-right: 15px;
     padding-left: 15px;
     margin-top: 40px;
