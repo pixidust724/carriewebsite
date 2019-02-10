@@ -1,26 +1,56 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen+Mono");
-h1 {
-  font-family: 'Oxygen Mono', monospace;
-  font-size: 2em; }
-
-h2 {
-  font-family: 'Oxygen Mono', monospace;
-  font-size: 1.5em; }
-
-h3 {
-  font-family: 'Oxygen Mono', monospace;
-  font-size: 1.2em; }
-
 body {
-  background-color: #D1E8FF;
+  font-family: "Oxygen Mono", monospace;
+  background-color: #74b7fe;
   color: #000; }
 
-div.container {
-  margin: 40px auto;
-  max-width: 780px; }
+h1 {
+  font-size: 56px; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 32px; } }
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 24px; } }
 
-body {
-  width: 100%; }
+h3 {
+  font-size: 32px;
+  font-weight: 700px; }
+  @media (max-width: 375px) {
+    h3 {
+      font-size: 18px; } }
+
+a {
+  text-decoration: none;
+  color: #000;
+  z-index: 1;
+  position: relative; }
+
+p {
+  font-size: 18px; }
+  @media (max-width: 768px) {
+    p {
+      font-size: 16px; } }
+  @media (max-width: 375px) {
+    p {
+      font-size: 14px; } }
+
+img.icon {
+  width: 56px;
+  height: 56px;
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle; }
+
+img.footer-icon {
+  display: inline; }
+
+div.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto; }
 
 .keyart, .keyart_layer {
   width: auto;
@@ -60,6 +90,8 @@ body {
 
 @media (max-width: 640px) {
   .keyart_layer {
+    max-width: 100%;
+    height: auto;
     background-size: auto 400px; }
 
   .keyart, .keyart_layer {
@@ -85,31 +117,6 @@ header nav li {
 
 header nav li a {
   padding: 12px; }
-
-h3 {
-  margin: 0; }
-
-a {
-  font-font-size: 16px;
-  font-family: 'Oxygen Mono', monospace;
-  text-decoration: none;
-  color: #000;
-  z-index: 1;
-  position: relative; }
-
-p {
-  font-font-size: 16px;
-  font-family: 'Oxygen Mono', monospace; }
-
-img.icon {
-  width: 56px;
-  height: 56px;
-  display: inline-block;
-  align-items: center;
-  vertical-align: middle; }
-
-img.footer-icon {
-  display: inline; }
 
 section.collage {
   cursor: url("icon/cursor.svg"), auto;
@@ -137,5 +144,9 @@ img.portfolio-img:hover {
 footer {
   padding-top: 60px;
   text-align: center; }
+
+@media (max-width: 375px) {
+  img.footer-icon {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
